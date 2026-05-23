@@ -6,7 +6,7 @@ export default function Squad() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/squad")
+    fetch(`${import.meta.env.VITE_API_URL}/api/squad`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch");
         return res.json();

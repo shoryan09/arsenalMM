@@ -7,7 +7,7 @@ export default function Results() {
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/matches/results")
+    fetch(`${import.meta.env.VITE_API_URL}/api/matches/results`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch");
         return res.json();

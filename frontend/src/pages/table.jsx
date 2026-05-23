@@ -6,7 +6,7 @@ export default function Table() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/standings/PL")
+    fetch(`${import.meta.env.VITE_API_URL}/api/standings/PL`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch");
         return res.json();

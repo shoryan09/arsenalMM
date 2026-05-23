@@ -7,7 +7,7 @@ export default function News() {
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/news")
+    fetch(`${import.meta.env.VITE_API_URL}/api/news`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch");
         return res.json();
