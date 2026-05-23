@@ -7,6 +7,7 @@ import Squad from "./pages/squad";
 import Fixtures from "./pages/fixtures";
 import Results from "./pages/results";
 import News from "./pages/news";
+import Ask from "./pages/ask";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <main className="pt-14 flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/ask" element={<Ask />} />
           <Route path="/table" element={<Table />} />
           <Route path="/squad" element={<Squad />} />
           <Route path="/fixtures" element={<Fixtures />} />
